@@ -5,15 +5,21 @@ exports.HomePage = class HomePage {
     this.page = page;
     this.heading = page.getByRole("heading", { name: "Available Examples" });
     this.checkboxes = page.getByRole("link", { name: "Checkboxes" });
+    this.dataTable = page.getByRole("link", { name: "Sortable Data Tables" });
   }
   // Action on Home Page
-  async gotoHomePage() {
+  async goToHomePage() {
     await this.page.goto("https://the-internet.herokuapp.com/");
   }
 
-  async gotoCheckBoxLink() {
+  async goToCheckBoxLink() {
     await this.checkboxes.click();
   }
+
+  async goToDataTableLink() {
+    await this.dataTable.click();
+  }
+
   //Assertion on Home Page
   async checkPageTitle() {
     await expect(this.page).toHaveTitle("The Internet");
