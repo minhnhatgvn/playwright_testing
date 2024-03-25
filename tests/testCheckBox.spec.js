@@ -6,7 +6,7 @@ const { HomePage } = require("./../pages/HomePage");
 test("Checkbox page test", async ({ page }) => {
   const CheckBox = new CheckBoxPage(page);
   const Home = new HomePage(page);
-  await Home.gotoHomePage();
-  await Home.gotoCheckBoxLink();
+  await Home.goToHomePage();
+  await Home.goToCheckBoxLink();
   await CheckBox.checkFirstCheckBox();
 });
