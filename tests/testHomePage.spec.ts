@@ -1,11 +1,9 @@
 // @ts-check
-const { test, expect } = require('@playwright/test');
-const { HomePage } = require('./../pages/HomePage');
+import { test, expect } from "./test-setup.spec.ts";
 
-test('Home Page test', async ({ page }) => {
-  const Home = new HomePage(page);
-  await Home.goToHomePage();
-  await Home.checkPageTitle();
-  await Home.checkHeading();
-  await Home.goToCheckBoxLink();
+test('Home Page test', async ({ homePage }) => {
+  await homePage.goToHomePage();
+  await homePage.checkPageTitle();
+  await homePage.checkHeading();
+  await homePage.goToCheckBoxLink();
 })

@@ -4,14 +4,10 @@
 - The elements is displayed correctly 2 checkboxes
 - Able to check/uncheck the checkboxes
 */
-const { test, expect } = require("@playwright/test");
-const { CheckBoxPage } = require("./../pages/CheckBoxPage");
-const { HomePage } = require("./../pages/HomePage");
+import { test, expect } from "./test-setup.spec.ts";
 
-test("Checkbox page test", async ({ page }) => {
-  const CheckBox = new CheckBoxPage(page);
-  const Home = new HomePage(page);
-  await Home.goToHomePage();
-  await Home.goToCheckBoxLink();
-  await CheckBox.verifyCheckboxPage();
+test("Checkbox page test", async ({ checkboxPage, homePage }) => {
+  await homePage.goToHomePage();
+  await homePage.goToCheckBoxLink();
+  await checkboxPage.verifyCheckboxPage();
 });
