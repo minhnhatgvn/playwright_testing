@@ -6,8 +6,11 @@
 */
 import { test, expect } from "./test-setup.spec.ts";
 
-test("Checkbox page test", async ({ checkboxPage, homePage }) => {
+test.beforeEach(async ({ homePage }) => {
   await homePage.goToHomePage();
+});
+
+test("Checkbox page test", async ({ checkboxPage, homePage }) => { 
   await homePage.goToCheckBoxLink();
   await checkboxPage.verifyCheckboxPage();
 });

@@ -7,6 +7,10 @@
 
 import { test, expect } from "./test-setup.spec.ts";
 
+test.beforeEach(async ({ homePage }) => {
+  await homePage.goToHomePage();
+});
+
 test("DataTable page test", async ({ datatablePage, homePage }) => {
   await homePage.goToHomePage();
   await homePage.goToDataTableLink();
