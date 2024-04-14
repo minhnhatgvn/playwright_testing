@@ -1,4 +1,3 @@
-// @ts-check
 import { test, expect } from "./test-setup.spec.ts";
 
 test.beforeEach(async ({ homePage }) => {
