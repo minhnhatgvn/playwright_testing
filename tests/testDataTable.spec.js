@@ -1,4 +1,3 @@
-// @ts-check
 /* The test will verify data table on the url https://the-internet.herokuapp.com/tables:
 - the url is  contain /tables
 - the elements is displayed correctly : Table 1 and Table 2
