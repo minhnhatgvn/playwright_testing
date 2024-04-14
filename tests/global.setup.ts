@@ -1,6 +1,6 @@
-import { test } from "@playwright/test";
+import { test as setup } from '@playwright/test';
 
-setup("create new database", async ({}) => {
+setup("create test setup", async ({}) => {
   console.log("Seting up");
   // Initialize the database
 });
