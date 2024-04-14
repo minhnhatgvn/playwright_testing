@@ -1,4 +1,4 @@
-import { test, expect } from "./test-setup.spec.ts";
+import { test } from "@playwright/test";
 
 
 test("Teardown", async ({ page }) => {
